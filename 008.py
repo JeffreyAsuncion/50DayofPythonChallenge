@@ -61,6 +61,20 @@ def find_longest_word(words):
     
     return 1
 
+def validation_008(func, input, validate_value):
+    """
+    Validate the function to see if passes validation testing
+    
+    Args:
+        func (function)
+        input (list[str])
+        validation_value (dict)
+
+    return
+        boolean - if function passes validation
+    """
+
+    return (func(input) == validate_value)
 
 words1 = ["Hate", "remorse", "vengeance"]
 words2 = ["Love", "Hate"]
@@ -68,5 +82,11 @@ words2 = ["Love", "Hate"]
 # print(find_longest_word(words1))
 # print(find_longest_word(words2))
 
-print(word_index(words1))
-print(word_index(words2))
+# print(word_index(words1))
+# print(word_index(words2))
+
+validate1 = 1
+validate2 = ['Love', 'Hate']
+
+print(validation_008(word_index, words1, validate1))
+print(validation_008(word_index, words2, validate2))
